@@ -1,0 +1,63 @@
+<ion-view view-title="Admin" name="admin-view">
+    <ion-content class="padding">
+
+        <div class="card" ng-repeat="user in users | orderBy:'email'">
+            <div class="item item-divider item-calm">
+                {{user.email}}
+            </div>
+            <div class="item item-body">
+                <div class="row">
+                    <div class="col col-25">
+                        <strong>Name</strong>
+                    </div>
+                    <div class="col col-75">
+                        {{user.name}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-25">
+                        <strong>Provider</strong>
+                    </div>
+                    <div class="col col-75">
+                        {{user.provider}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-25">
+                        <strong>Role</strong>
+                    </div>
+                    <div class="col col-75">
+                        {{(user.role == 0 ? "User" : (user.role == 1 ? "Manager" : "Admin"))}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>
+<div class="row">
+    <div class="col-md-offset-3 col-md-6">
+        <center>
+            <br>
+            <br>
+            <table class="table table-bordered table-striped table-hover table-responsive">
+                <thead>
+                <tr>
+                    <th>Provider</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="user in users">
+                    <td>{{user.provider}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{(user.role == 0 ? "User" : (user.role == 1 ? "Manager" : "Admin"))}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </center>
+    </div>
+</div>

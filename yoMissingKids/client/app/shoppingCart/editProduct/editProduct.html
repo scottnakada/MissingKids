@@ -1,0 +1,370 @@
+<h1>Edit Products</h1>
+<div>
+    <!-- show List or show gallery buttons -->
+    <button type="button" class="btn btn-primary btn-md" aria-label="Gallery" ng-click="showList=false">
+        <span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp Edit Gallery
+    </button>
+    <button type="button" class="btn btn-primary btn-md" aria-label="List" ng-click="showList=true">
+        <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp Edit List
+    </button>
+    <br>
+    <!-- Gallery view -->
+    <div class="row" ng-hide="showList">
+        <h3>Sort By</h3>
+
+        <div>
+            <button class="btn btn-primary btn-sm" ng-click="order='sku'" title="Sort by sku ascending">
+                SKU
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='-sku'" title="Sort by sku descending">
+                -SKU
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='name'" title="Sort by name ascending">
+                Name
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='-name'" title="Sort by name descending">
+                -Name
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='description'" title="Sort by description ascending">
+                Desc
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='-description'"
+                    title="Sort by Description descending">
+                -Desc
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='price'" title="Sort by Price ascending">
+                Price
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='-price'" title="Sort by Price descending">
+                -Price
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='cal'" title="Sort by Cal ascending">
+                Calories
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='-cal'" title="Sort by Cal descending">
+                -Calories
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='nutrients.Carotenoid'"
+                    title="Sort by Carotenoid ascending">
+                Carotenoid
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='-nutrients.Carotenoid'"
+                    title="Sort by Carotenoid descending">
+                -Carotenoid
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='nutrients.fiber'" title="Sort by Fiber ascending">
+                Fiber
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='-nutrients.fiber'" title="Sort by Fiber descending">
+                -Fiber
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='nutrients.Folates'"
+                    title="Sort by Folate ascending">
+                Folate
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='-nutrients.Folates'"
+                    title="Sort by Folate descending">
+                -Folate
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='nutrients.Potassium'"
+                    title="Sort by Potassium ascending">
+                Potassium
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='-nutrients.Potassium'"
+                    title="Sort by Potassium descending">
+                -Potassium
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='nutrients.VitaminC'"
+                    title="Sort by Vitamin C ascending">
+                Vitamin C
+            </button>
+            <button class="btn btn-primary btn-sm" ng-click="order='-nutrients.VitaminC'"
+                    title="Sort by Vitamin C descending">
+                -Vitamin C
+            </button>
+            <br>
+        </div>
+        <h3>Search By</h3>
+
+        <div>
+            <input type="text" ng-model='search.sku' placeholder="SKU?" size='3'>
+            <input type="text" ng-model="search.name" placeholder="Search Name" size='10'>
+            <input type="text" ng-model="search.description" placeholder="Search Desc" size="10">
+            <br><br>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="panel panel-primary panel-edit-product">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Input Product
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <b>SKU:</b> <input type="text" ng-model="newProduct.sku" placeholder="SKU" size='3'><br>
+                    <b>Name:</b> <input type="text" ng-model="newProduct.name" placeholder="Enter Name" size='15'><br>
+                    <b>Description:</b><br>
+                    <textarea ng-model='newProduct.description' rows="3" cols="30"></textarea><br>
+                    <b>Image URL:</b> <input type="text" ng-model='newProduct.image' size='30'>
+                    <img src='{{newProduct.image}}' width='80px'/><br>
+                    <b>Price:</b> <input type="text" ng-model='newProduct.price' size='5'><br>
+                    <b>Calories:</b> <input type="text" ng-model='newProduct.cal' size='5'><br>
+                    <b>Nutrients</b><br>
+                    <b>&nbsp;&nbsp;&nbsp;Carotenoid:</b> <input type="text" ng-model='newProduct.nutrients.Carotenoid'
+                                                                size='5'><br>
+                    <b>&nbsp;&nbsp;&nbsp;Fiber:</b> <input type="text" ng-model='newProduct.nutrients.Fiber'
+                                                           size='5'><br>
+                    <b>&nbsp;&nbsp;&nbsp;Folates:</b> <input type="text" ng-model='newProduct.nutrients.Folates'
+                                                             size='5'><br>
+                    <b>&nbsp;&nbsp;&nbsp;Potassium:</b> <input type="text" ng-model='newProduct.nutrients.Potassium'
+                                                               size='5'><br>
+                    <b>&nbsp;&nbsp;&nbsp;Vitamin C:</b> <input type="text" ng-model='newProduct.nutrients.VitaminC'
+                                                               size='5'><br>
+
+                    <button class="btn btn-success btn-sm"
+                            ng-click='store.products.$add(newProduct); newProduct = null;'
+                            title="Add a Product">
+                        Add Product
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"
+             ng-repeat="product in store.products | orderBy:order | filter:search">
+            <div class="panel panel-primary panel-edit-product">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Edit Product {{product.name}}
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <b>SKU:</b> <input type="text" ng-model="product.sku" placeholder="SKU" size='3'><br>
+                    <b>Name:</b> <input type="text" ng-model="product.name" placeholder="Enter Name" size='15'><br>
+                    <b>Description:</b><br>
+                    <textarea ng-model='product.description' rows="3" cols="30"></textarea><br>
+                    <b>Image URL:</b> <input type="text" ng-model='product.image' size='30'>
+                    <img src='{{product.image}}' width='80px'/><br>
+                    <b>Price:</b> <input type="text" ng-model='product.price' size='5'><br>
+                    <b>Calories:</b> <input type="text" ng-model='product.cal' size='5'><br>
+                    <b>Nutrients</b><br>
+                    <b>&nbsp;&nbsp;&nbsp;Carotenoid:</b> <input type="text" ng-model='product.nutrients.Carotenoid'
+                                                                size='5'><br>
+                    <b>&nbsp;&nbsp;&nbsp;Fiber:</b> <input type="text" ng-model='product.nutrients.Fiber' size='5'><br>
+                    <b>&nbsp;&nbsp;&nbsp;Folates:</b> <input type="text" ng-model='product.nutrients.Folates'
+                                                             size='5'><br>
+                    <b>&nbsp;&nbsp;&nbsp;Potassium:</b> <input type="text" ng-model='product.nutrients.Potassium'
+                                                               size='5'><br>
+                    <b>&nbsp;&nbsp;&nbsp;Vitamin C:</b> <input type="text" ng-model='product.nutrients.VitaminC'
+                                                               size='5'><br>
+
+                    <button class="btn btn-warning btn-sm" ng-click='store.products.$save(product)'
+                            title="Update the data for this Product">
+                        Update
+                    </button>
+
+                    <button class="btn btn-danger btn-sm" ng-click="store.products.$remove(product)"
+                            title="Delete this Product from the database">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- List View -->
+    <table class="table table-hover table-bordered table-striped" ng-show="showList">
+        <thead>
+        <tr ng-show="showList">
+            <th>
+                <button class="btn btn-primary btn-sm" ng-click="order='sku'" title="Sort by sku ascending">
+                    SKU
+                </button>
+                <button class="btn btn-primary btn-sm" ng-click="order='-sku'" title="Sort by sku descending">
+                    -SKU
+                </button>
+                <input type="text" ng-model='search.sku' placeholder="SKU?" size='3'>
+            </th>
+            <th>
+                <button class="btn btn-primary btn-sm" ng-click="order='name'" title="Sort by name ascending">
+                    Name
+                </button>
+                <button class="btn btn-primary btn-sm" ng-click="order='-name'" title="Sort by name descending">
+                    -Name
+                </button>
+                <input type="text" ng-model="search.name" placeholder="Search Name" size='10'>
+            </th>
+            <th>
+                <button class="btn btn-primary btn-sm" ng-click="order='description'"
+                        title="Sort by description ascending">
+                    Desc
+                </button>
+                <button class="btn btn-primary btn-sm" ng-click="order='-description'"
+                        title="Sort by Description descending">
+                    -Desc
+                </button>
+                <input type="text" ng-model="search.description" placeholder="Search Desc" size="10">
+            </th>
+            <th> Image</th>
+            <th>
+                <button class="btn btn-primary btn-sm" ng-click="order='price'" title="Sort by Price ascending">
+                    Price
+                </button>
+                <button class="btn btn-primary btn-sm" ng-click="order='-price'" title="Sort by Price descending">
+                    -Price
+                </button>
+            </th>
+            <th>
+                <button class="btn btn-primary btn-sm" ng-click="order='cal'" title="Sort by Cal ascending">
+                    Calories
+                </button>
+                <button class="btn btn-primary btn-sm" ng-click="order='-cal'" title="Sort by Cal descending">
+                    -Calories
+                </button>
+            </th>
+            <th>
+                <button class="btn btn-primary btn-sm" ng-click="order='nutrients.Carotenoid'"
+                        title="Sort by Carotenoid ascending">
+                    Carotenoid
+                </button>
+                <button class="btn btn-primary btn-sm" ng-click="order='-nutrients.Carotenoid'"
+                        title="Sort by Carotenoid descending">
+                    -Carotenoid
+                </button>
+            </th>
+            <th>
+                <button class="btn btn-primary btn-sm" ng-click="order='nutrients.VitaminC'"
+                        title="Sort by Vitamin C ascending">
+                    Vitamin C
+                </button>
+                <button class="btn btn-primary btn-sm" ng-click="order='-nutrients.VitaminC'"
+                        title="Sort by Vitamin C descending">
+                    -Vitamin C
+                </button>
+            </th>
+            <th>
+                <button class="btn btn-primary btn-sm" ng-click="order='nutrients.Folates'"
+                        title="Sort by Folate ascending">
+                    Folate
+                </button>
+                <button class="btn btn-primary btn-sm" ng-click="order='-nutrients.Folates'"
+                        title="Sort by Folate descending">
+                    -Folate
+                </button>
+            </th>
+            <th>
+                <button class="btn btn-primary btn-sm" ng-click="order='nutrients.Potassium'"
+                        title="Sort by Potassium ascending">
+                    Potassium
+                </button>
+                <button class="btn btn-primary btn-sm" ng-click="order='-nutrients.Potassium'"
+                        title="Sort by Potassium descending">
+                    -Potassium
+                </button>
+            </th>
+            <th>
+                <button class="btn btn-primary btn-sm" ng-click="order='nutrients.Fiber'"
+                        title="Sort by fiber ascending">
+                    Fiber
+                </button>
+                <button class="btn btn-primary btn-sm" ng-click="order='-nutrients.Fiber'"
+                        title="Sort by fiber descending">
+                    -Fiber
+                </button>
+            </th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <input type="text" ng-model="newProduct.sku" placeholder="SKU" size='3'>
+            </td>
+            <td>
+                <input type="text" ng-model="newProduct.name" placeholder="Enter Name" size='10'>
+            </td>
+            <td>
+        <textarea ng-model="newProduct.description" placeholder="Enter Description" rows="3" cols="15">
+          </textarea>
+            </td>
+            <td>
+                <input type="text" ng-model="newProduct.image" placeholder="Image URL" size='7'>
+            </td>
+            <td>
+                <input type="text" ng-model="newProduct.price" placeholder="Enter Price" size='3'>
+            </td>
+            <td>
+                <input type="text" ng-model="newProduct.cal" placeholder="Enter Calories" size='3'>
+            </td>
+            <td>
+                <input type="text" ng-model="newProduct.nutrients.Carotenoid" placeholder="Carotenoid" size='3'>
+            </td>
+            <td>
+                <input type="text" ng-model="newProduct.nutrients.VitaminC" placeholder="Vitamin C" size='3'>
+            </td>
+            <td>
+                <input type="text" ng-model="newProduct.nutrients.Folates" placeholder="Folates" size='3'>
+            </td>
+            <td>
+                <input type="text" ng-model="newProduct.nutrients.Potassium" placeholder="Potassium" size='3'>
+            </td>
+            <td>
+                <input type="text" ng-model="newProduct.nutrients.Fiber" placeholder="Fiber" size='3'>
+            </td>
+            <td>
+                <button class="btn btn-success btn-sm" ng-click='store.products.$add(newProduct); newProduct = null;'
+                        title="Add a Product">
+                    Add Product
+                </button>
+            </td>
+            <td></td>
+        </tr>
+        <tr ng-repeat="product in store.products | filter:search | orderBy:order">
+            <td>
+                <input type="text" ng-model='product.sku' size='3'>
+            </td>
+            <td>
+                <input type="text" ng-model='product.name' size='10'>
+            </td>
+            <td>
+        <textarea ng-model='product.description' rows="3" cols="15">
+          </textarea>
+            </td>
+            <td><img src='{{product.image}}' width='80px'/></td>
+            <td>
+                <input type="text" ng-model='product.price' size='3'>
+            </td>
+            <td>
+                <input type="text" ng-model='product.cal' size='3'>
+            </td>
+            <td>
+                <input type="text" ng-model='product.nutrients.Carotenoid' size='3'>
+            </td>
+            <td>
+                <input type="text" ng-model='product.nutrients.VitaminC' size='3'>
+            </td>
+            <td>
+                <input type="text" ng-model='product.nutrients.Folates' size='3'>
+            </td>
+            <td>
+                <input type="text" ng-model='product.nutrients.Potassium' size='3'>
+            </td>
+            <td>
+                <input type="text" ng-model='product.nutrients.Fiber' size='3'>
+            </td>
+            <td>
+                <button class="btn btn-warning btn-sm" ng-click='store.products.$save(product)'
+                        title="Update the data for this Product">
+                    Update
+                </button>
+            </td>
+            <td>
+                <button class="btn btn-danger btn-sm" ng-click="store.products.$remove(product)"
+                        title="Delete this Product from the database">
+                    Delete
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

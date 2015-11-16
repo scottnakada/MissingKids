@@ -1,0 +1,82 @@
+<ion-view view-title="Product" name="product-view">
+    <ion-content class="padding">
+
+        <div class="list card">
+            <div class="item item-avatar item-text-wrap">
+                <img ng-src="{{product.image}}" alt="{{product.name}}" style="height:70px"/>
+
+                <h2>{{product.name}}: {{product.description}}</h2>
+            </div>
+
+            <div class="item item-body">
+                <div class="item item-divider item-calm">
+                    <a href="#/app/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                        <i class="ion-ios-cart"></i>
+                        <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+                    </a>
+                </div>
+
+                <div class="row">
+                    <div class="col col-33">
+                        <b>Calories</b>
+                    </div>
+                    <div class="col col-67">
+                        <b>{{product.cal}}</b>
+                    </div>
+                </div>
+                <div class="row" ng-repeat="(nutrientName, nutrientValue) in product.nutrients">
+                    <div class="col col-33">
+                        <b>{{nutrientName}}</b><br>
+                        <img ng-src="http://scottnakada.github.io/UserAuthStore/images/products/r0.png"
+                             height="20px" alt="0" ng-show="nutrientValue==0"/>
+                        <img ng-src="http://scottnakada.github.io/UserAuthStore/images/products/r1.png"
+                             height="20px" alt="1" ng-show="nutrientValue==1"/>
+                        <img ng-src="http://scottnakada.github.io/UserAuthStore/images/products/r2.png"
+                             height="20px" alt="2" ng-show="nutrientValue==2"/>
+                        <img ng-src="http://scottnakada.github.io/UserAuthStore/images/products/r3.png"
+                             height="20px" alt="3" ng-show="nutrientValue==3"/>
+                        <img ng-src="http://scottnakada.github.io/UserAuthStore/images/products/r4.png"
+                             height="20px" alt="4" ng-show="nutrientValue==4"/>
+                    </div>
+                    <div class="col col-67">
+                        <b>{{store.dvaCaption[nutrientValue]}}</b>:
+                        {{store.dvaRange[nutrientValue]}}
+                        of the recommended daily value.
+                    </div>
+                </div>
+
+                <div class="item item-divider item-calm">
+                    <a href="#/app/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                        <i class="ion-ios-cart"></i>
+                        <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+                    </a>
+                </div>
+
+            </div>
+
+            <button class="button button-full button-balanced"
+                    ng-click="cart.addItem(product.sku, product.name, product.price, 1)">
+                <a class="button icon-left ion-ios-cart button-balanced">
+                    Add to Cart
+                </a>
+            </button>
+
+            <button class="button button-full button-assertive"
+                    ng-click="cart.addItem(product.sku, product.name, product.price, -10000)"
+                    ng-disabled="cart.getTotalCount(product.sku) < 1">
+                <a class="button icon-left ion-ios-trash button-assertive">
+                    Remove from Cart
+                </a>
+            </button>
+
+            <button class="button button-full button-calm" onclick="window.location.href='#/app/store'">
+                <a class="button icon-left ion-chevron-left button-calm">
+                    Back to the Store
+                </a>
+            </button>
+
+        </div>
+
+
+    </ion-content>
+</ion-view>

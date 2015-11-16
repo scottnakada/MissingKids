@@ -1,0 +1,68 @@
+<ion-view view-title="Store" name="store-view">
+    <ion-content class="padding">
+
+        <label class="item item-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="search" ng-model="search" placeholder="Search Products">
+        </label>
+
+        <div class="card">
+            <div class="item item-divider item-positive">
+                <a href="#/app/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                    <i class="ion-ios-cart"></i>
+                    <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+                </a>
+            </div>
+        </div>
+
+        <div class="list card"
+             ng-repeat="product in store.products | orderBy:'name' | filter:search">
+            <div class="item item-divider item-calm">
+                <a href="#/app/products/{{product.sku}}">
+                    {{product.name}}
+                </a>
+            </div>
+
+            <div class="item item-body">
+                <a href="#/app/products/{{product.sku}}">
+                    <img ng-src="{{product.image}}" alt="{{product.name}}" style="height:70px"/>
+
+                    <h1 style="float:right">
+                        {{product.price | currency}}
+                    </h1><br>
+                    <b>Description:</b><br>
+
+                    <h2>
+                        {{product.description}}
+                    </h2>
+
+                    <b>Calories:</b> {{product.cal}}<br><br>
+                    <b>Nutrients</b><br><br>
+                    <b>Carotenoid:</b> {{product.nutrients.Carotenoid}}<br>
+                    <b>Fiber:</b> {{product.nutrients.Fiber}}<br>
+                    <b>Folates:</b> {{product.nutrients.Folates}}<br>
+                    <b>Potassium:</b> {{product.nutrients.Potassium}}<br>
+                    <b>Vitamin C:</b> {{product.nutrients.VitaminC}}<br>
+                </a>
+            </div>
+
+            <div class="item item-divider item-calm">
+                <a href="" ng-click="cart.addItem(product.sku, product.name, product.price, 1)">
+                    <button class="button button-balanced">
+                        Add to Cart
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="item item-divider item-positive">
+                <a href="#/app/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                    <i class="ion-ios-cart"></i>
+                    <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+                </a>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

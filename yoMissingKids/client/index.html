@@ -1,0 +1,184 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title>Missing Kids App</title>
+    <meta name="description" content="Missing Kids App">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(client) app/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angularjs-toaster/toaster.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,client}) app/app.css -->
+    <link rel="stylesheet" href="app/app.css">
+    <!-- injector:css -->
+    <link rel="stylesheet" href="app/app.css">
+    <link rel="stylesheet" href="app/error/error.css">
+    <link rel="stylesheet" href="app/error2/error2.css">
+    <link rel="stylesheet" href="app/game1/game1/game1.css">
+    <link rel="stylesheet" href="app/game1/game1A/game1A.css">
+    <link rel="stylesheet" href="app/game1/game1B/game1B.css">
+    <link rel="stylesheet" href="app/game1/game1C/game1C.css">
+    <link rel="stylesheet" href="app/home/home.css">
+    <link rel="stylesheet" href="app/myKids/myKids.css">
+    <link rel="stylesheet" href="app/report/report.css">
+    <link rel="stylesheet" href="app/results/results.css">
+    <link rel="stylesheet" href="app/shoppingCart/cart/cart.css">
+    <link rel="stylesheet" href="app/shoppingCart/editProduct/editProduct.css">
+    <link rel="stylesheet" href="app/shoppingCart/products/products.css">
+    <link rel="stylesheet" href="app/shoppingCart/store/store.css">
+    <link rel="stylesheet" href="app/statistics/statistics.css">
+    <link rel="stylesheet" href="app/thankYou/thankYou.css">
+    <link rel="stylesheet" href="app/userAuth/admin/admin.css">
+    <link rel="stylesheet" href="app/userAuth/changePass/changePass.css">
+    <link rel="stylesheet" href="app/userAuth/login/login.css">
+    <link rel="stylesheet" href="app/userAuth/register/register.css">
+    <link rel="stylesheet" href="components/modal/modal.css">
+    <!-- endinjector -->
+    <!-- endbuild -->
+</head>
+<body ng-app="yoMissingKidsApp">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<!-- Toaster Notifications Window -->
+<toaster-container toaster-options="{'time-out': 3000, 'close-button':true}">
+</toaster-container>
+
+<header class="hero-unit" id="banner">
+    <div class="container">
+        <h1>Kids Hope Network</h1>
+
+        <p class="lead">This app teaches people to recognise the faces of missing children;
+            while improving their face to name association skills.</p>
+    </div>
+</header>
+
+<!-- Add your site or application content here -->
+<div class="row">
+    <div ui-view="">
+
+    </div>
+</div>
+
+<div class="row">
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <a href="http://www.quickstartprototypes.com">Quickstart Prototypes</a> |
+                <a href="mailTo:scottnakada@gmail.com">scottnakada@gmail.com</a></p>
+        </div>
+    </footer>
+</div>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+</script>
+
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
+<![endif]-->
+<!-- build:js({client,node_modules}) app/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/json3/lib/json3.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/lodash/dist/lodash.compat.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angularjs-toaster/toaster.js"></script>
+<script src="bower_components/firebase/firebase.js"></script>
+<script src="bower_components/angularfire/dist/angularfire.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/angular-moment/angular-moment.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+
+<!-- build:js(.tmp) app/app.js -->
+
+<script src="app/app.js"></script>
+<!-- injector:js -->
+<script src="app/error/error.controller.js"></script>
+<script src="app/error/error.js"></script>
+<script src="app/error2/error2.controller.js"></script>
+<script src="app/error2/error2.js"></script>
+<script src="app/game1/game1/game1.controller.js"></script>
+<script src="app/game1/game1/game1.js"></script>
+<script src="app/game1/game1A/game1A.controller.js"></script>
+<script src="app/game1/game1A/game1A.js"></script>
+<script src="app/game1/game1B/game1B.controller.js"></script>
+<script src="app/game1/game1B/game1B.js"></script>
+<script src="app/game1/game1C/game1C.controller.js"></script>
+<script src="app/game1/game1C/game1C.js"></script>
+<script src="app/home/home.controller.js"></script>
+<script src="app/home/home.js"></script>
+<script src="app/myKids/myKids.controller.js"></script>
+<script src="app/myKids/myKids.js"></script>
+<script src="app/report/report.controller.js"></script>
+<script src="app/report/report.js"></script>
+<script src="app/results/results.controller.js"></script>
+<script src="app/results/results.js"></script>
+<script src="app/shoppingCart/cart/cart.controller.js"></script>
+<script src="app/shoppingCart/cart/cart.js"></script>
+<script src="app/shoppingCart/dataService/dataService.service.js"></script>
+<script src="app/shoppingCart/editProduct/editProduct.controller.js"></script>
+<script src="app/shoppingCart/editProduct/editProduct.js"></script>
+<script src="app/shoppingCart/products/products.controller.js"></script>
+<script src="app/shoppingCart/products/products.js"></script>
+<script src="app/shoppingCart/store/store.controller.js"></script>
+<script src="app/shoppingCart/store/store.js"></script>
+<script src="app/statistics/statistics.controller.js"></script>
+<script src="app/statistics/statistics.js"></script>
+<script src="app/thankYou/thankYou.controller.js"></script>
+<script src="app/thankYou/thankYou.js"></script>
+<script src="app/userAuth/admin/admin.controller.js"></script>
+<script src="app/userAuth/admin/admin.js"></script>
+<script src="app/userAuth/auth/auth.service.js"></script>
+<script src="app/userAuth/changePass/changePass.controller.js"></script>
+<script src="app/userAuth/changePass/changePass.js"></script>
+<script src="app/userAuth/login/login.controller.js"></script>
+<script src="app/userAuth/login/login.js"></script>
+<script src="app/userAuth/register/register.controller.js"></script>
+<script src="app/userAuth/register/register.js"></script>
+<script src="components/modal/modal.service.js"></script>
+<script src="components/navbar/navbar.controller.js"></script>
+<!-- endinjector -->
+<!-- endbuild -->
+</body>
+</html>

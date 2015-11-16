@@ -1,0 +1,80 @@
+<ion-view view-title="Cart" name="cart-view">
+    <ion-content class="padding">
+
+        <div class="card" ng-repeat="item in cart.items | orderBy:'name'">
+            <div class="item item-divider item-calm">
+                {{item.name}}
+            </div>
+            <div class="item item-body">
+                <div class="button-bar button-bar-small">
+                    <button
+                        class="button icon ion-plus button-small button-balanced"
+                        ng-disabled="item.quantity >= 1000"
+                        ng-click="cart.addItem(item.sku, item.name, item.price, +1)">
+                    </button>
+
+                    <h1>
+                        <input
+                            class="text-center" size="4"
+                            ng-model="item.quantity"
+                            ng-change="cart.saveItems()"/>
+                    </h1>
+
+                    <button
+                        class="button icon ion-minus button-small button-energized"
+                        ng-disabled="item.quantity <= 1"
+                        ng-click="cart.addItem(item.sku, item.name, item.price, -1)">
+                    </button>
+
+                    <h1>
+                        {{item.price * item.quantity | currency}}
+                    </h1>
+
+                    <button
+                        class="button icon ion-close button-small button-assertive"
+                        ng-click="cart.addItem(item.sku, item.name, item.price, -10000000)">
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="item item-divider item-calm">
+                Total
+            </div>
+            <div class="item item-body row">
+                <div class="col">
+                    <h1 class="text-center">
+                        {{cart.getTotalCount()}}
+                    </h1>
+                </div>
+                <div class="col">
+                    <h1 class="text-center">
+                        {{cart.getTotalPrice() | currency}}
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <button class="button button-full button-balanced" onclick="window.location.href='#/app/store'">
+            <a class="button icon-left ion-chevron-left button-balanced">
+                Back to the Store
+            </a>
+        </button>
+
+        <button class="button button-full button-assertive"
+                ng-click="cart.clearItems()"
+                ng-disabled="cart.getTotalCount() < 1">
+            Clear Cart
+        </button>
+
+        <button
+            class="button button-block"
+            ng-click="cart.checkout('PayPal')"
+            ng-disabled="cart.getTotalCount() < 1">
+            <img src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" alt="checkout PayPal"/>
+        </button>
+
+    </ion-content>
+</ion-view>

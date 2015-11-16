@@ -1,0 +1,106 @@
+<div class="col-sm-offset-1 col-sm-10">
+    <p class="text-info">
+
+    <h3>Please select the products you want and add them to your shopping cart.<br/>
+        When you are done, click the shopping cart icon to review your order and check out.<br></h3>
+    </p>
+
+    <p>
+        <!-- show List or show gallery buttons -->
+        <button type="button" class="btn btn-primary" aria-label="List"
+                ng-click="showList=true">
+            <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp Edit List
+        </button>
+        <button type="button" class="btn btn-primary" aria-label="Gallery"
+                ng-click="showList=false">
+            <span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp Edit Gallery
+        </button>
+
+        Search: <input ng-model="search">
+    </p>
+    <table class="table table-bordered">
+        <tr class="well">
+            <td class="tdRight" colspan="4">
+                <a href="/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                    <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <div class="row" ng-hide="showList">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"
+             ng-repeat="product in store.products | orderBy:'name' | filter:search">
+            <div class="panel panel-primary panel-product">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a href="/products/{{product.sku}}">
+                            {{product.name}}
+                        </a>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <a href="/products/{{product.sku}}">
+                        <img ng-src="{{product.image}}" alt="{{product.name}}" style="height:70px"/>
+
+                        <h3 style="float:right">
+                            {{product.price | currency}}
+                        </h3><br>
+                        <b>Description:</b><br>
+
+                        <p>&nbsp;&nbsp;&nbsp;{{product.description}}</p>
+                        <b>Calories:</b> {{product.cal}}<br>
+                        <b>Nutrients</b><br>
+                        <b>&nbsp;&nbsp;&nbsp;Carotenoid:</b> {{product.nutrients.Carotenoid}}<br>
+                        <b>&nbsp;&nbsp;&nbsp;Fiber:</b> {{product.nutrients.Fiber}}<br>
+                        <b>&nbsp;&nbsp;&nbsp;Folates:</b> {{product.nutrients.Folates}}<br>
+                        <b>&nbsp;&nbsp;&nbsp;Potassium:</b> {{product.nutrients.Potassium}}<br>
+                        <b>&nbsp;&nbsp;&nbsp;Vitamin C:</b> {{product.nutrients.VitaminC}}<br>
+                    </a><br>
+                    <a href="" ng-click="cart.addItem(product.sku, product.name, product.price, 1)">
+                        <button>add to cart</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" ng-show="showList">
+        <table class="table table-bordered">
+            <tr ng-repeat="product in store.products | orderBy:'name' | filter:search">
+                <td class="tdCenter">
+                    <a href="/products/{{product.sku}}">
+                        <img ng-src="{{product.image}}" alt="{{product.name}}" style="height:70px"/>
+                    </a>
+                </td>
+                <td>
+                    <a href="/products/{{product.sku}}"><b>{{product.name}}</b></a><br/>
+                    <a href="/products/{{product.sku}}">
+                        {{product.description}}
+                    </a>
+                </td>
+                <td class="tdRight">
+                    <a href="/products/{{product.sku}}">
+                        {{product.price | currency}}
+                    </a>
+                </td>
+                <td class="tdCenter">
+                    <a href="" ng-click="cart.addItem(product.sku, product.name, product.price, 1)">
+                        add to cart
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <table class="table table-bordered">
+        <tr class="well">
+            <td class="tdRight" colspan="4">
+                <a href="/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                    <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>

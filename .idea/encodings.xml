@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/ionMissingKids/.editorconfig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/bower.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/package.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/css/style.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/home/home.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/home/home.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/js/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/menu/menu.controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/menu/menu.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/shoppingCart/cart/cart.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/shoppingCart/cart/cart.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/shoppingCart/editProduct/editProduct.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/shoppingCart/editProduct/editProduct.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/shoppingCart/editProduct/editProduct.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/shoppingCart/products/products.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/shoppingCart/products/products.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/shoppingCart/store/store.controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/shoppingCart/store/store.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/shoppingCart/store/store.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/userAuth/admin/admin.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/userAuth/auth/auth.service.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/userAuth/login/login.controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/userAuth/login/login.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/userAuth/register/register.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/.editorconfig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/bower.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/app/app.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/app/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/app/error/error.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/app/error2/error2.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/app/game1/game1/game1.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/app/game1/game1A/game1A.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/app/game1/game1B/game1B.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/app/game1/game1C/game1C.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/app/home/home.controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/app/myKids/myKids.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/app/report/report.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/app/results/results.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/app/shoppingCart/store/store.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/app/statistics/statistics.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/app/thankYou/thankYou.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/app/userAuth/login/login.controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/components/navbar/navbar.controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yoMissingKids/client/components/navbar/navbar.html" charset="UTF-8" />
+  </component>
+</project>

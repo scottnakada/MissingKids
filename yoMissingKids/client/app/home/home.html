@@ -1,0 +1,74 @@
+<div class="col-md-offset-3 col-md-6">
+    <center><h1>Welcome to Missing Kids App</h1></center>
+    <h4>
+        <p>
+            Teach people to recognise the faces of missing children;
+            while improving their face to name association skills.
+        </p>
+        <br>
+
+        <div ng-hide="signedIn();">
+            <ol>
+                <li>
+                    Please create an account:
+                    <a href="/register">
+                        <button class="btn btn-info">
+                            Register
+                        </button>
+                    </a>
+                    <br><br>
+                </li>
+                <li>
+                    Please login:
+                    <a href="/login">
+                        <button class="btn btn-info">
+                            Login
+                        </button>
+                    </a>
+                </li>
+            </ol>
+        </div>
+        <div ng-show="signedIn();">
+            <ol>
+                <li ng-show="isManager()">
+                    Edit the Products:
+                    <a href="/editProduct">
+                        <button class="btn btn-info">
+                            Edit Product
+                        </button>
+                    </a>
+                    <br><br>
+                </li>
+                <li ng-show="isAdmin()">
+                    Administer Accounts:
+                    <a href="/admin">
+                        <button class="btn btn-info">
+                            Admin
+                        </button>
+                    </a>
+                    <br><br>
+                </li>
+                <li ng-show="changePassOk()">
+                    Change the password:
+                    <a href="/changePass">
+                        <button class="btn btn-info">
+                            <i class="fa fa-key"></i>
+                            Change Password
+                        </button>
+                    </a>
+                    <br><br>
+                </li>
+                <li>
+                    Logout when done:
+                    <a href="/home" ng-click="logout()">
+                        <button class="btn btn-info">
+                            <i class="fa fa-sign-out"></i> Logout
+                        </button>
+                    </a>
+
+                </li>
+            </ol>
+        </div>
+    </h4>
+
+</div>

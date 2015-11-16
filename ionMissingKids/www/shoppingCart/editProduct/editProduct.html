@@ -1,0 +1,299 @@
+<ion-view view-title="Edit Products" name="editProduct-view">
+    <ion-content class="padding">
+
+        <div class="list card">
+            <div class="item item-divider item-calm item-icon-right" data-ng-init="editProductSortExpand=false">
+                Sort By
+                <button
+                    class="button icon ion-plus button-small button-positive"
+                    data-ng-click="editProductSortExpand=true"
+                    data-ng-hide="editProductSortExpand">
+                </button>
+                <button
+                    class="button icon ion-minus button-small button-positive"
+                    data-ng-click="editProductSortExpand=false"
+                    data-ng-show="editProductSortExpand">
+                </button>
+            </div>
+            <div class="item item-body" data-ng-show="editProductSortExpand">
+                <button class="button button-small button-royal" ng-click="order='sku'" title="Sort by sku ascending">
+                    SKU
+                </button>
+                <button class="button button-small button-royal" ng-click="order='-sku'" title="Sort by sku descending">
+                    -SKU
+                </button>
+                <button class="button button-small button-royal" ng-click="order='name'" title="Sort by name ascending">
+                    Name
+                </button>
+                <button class="button button-small button-royal" ng-click="order='-name'"
+                        title="Sort by name descending">
+                    -Name
+                </button>
+                <button class="button button-small button-royal" ng-click="order='description'"
+                        title="Sort by description ascending">
+                    Desc
+                </button>
+                <button class="button button-small button-royal" ng-click="order='-description'"
+                        title="Sort by Description descending">
+                    -Desc
+                </button>
+                <button class="button button-small button-royal" ng-click="order='price'"
+                        title="Sort by Price ascending">
+                    Price
+                </button>
+                <button class="button button-small button-royal" ng-click="order='-price'"
+                        title="Sort by Price descending">
+                    -Price
+                </button>
+                <button class="button button-small button-royal" ng-click="order='cal'" title="Sort by Cal ascending">
+                    Calories
+                </button>
+                <button class="button button-small button-royal" ng-click="order='-cal'" title="Sort by Cal descending">
+                    -Calories
+                </button>
+            </div>
+        </div>
+
+        <div class="list card">
+            <div class="item item-divider item-calm item-icon-right" data-ng-init="editProductSearchExpand=false">
+                Search By
+                <button
+                    class="button icon ion-plus button-small button-positive"
+                    data-ng-click="editProductSearchExpand=true"
+                    data-ng-hide="editProductSearchExpand">
+                </button>
+                <button
+                    class="button icon ion-minus button-small button-positive"
+                    data-ng-click="editProductSearchExpand=false"
+                    data-ng-show="editProductSearchExpand">
+                </button>
+            </div>
+            <div class="item item-body" data-ng-show="editProductSearchExpand">
+                <div class="row item item-input-inset">
+                    <label class="item item-input-wrapper">
+                        <span class="input-label">SKU</span>
+                        <input type="text" ng-model="search.sku">
+                    </label>
+                </div>
+                <div class="row item item-input-inset">
+                    <label class="item item-input-wrapper">
+                        <span class="input-label">Name</span>
+                        <input type="text" ng-model="search.name">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="list card">
+            <div class="item item-divider item-calm item-icon-right" data-ng-init="editProductInputExpand=false">
+                Input Product
+                <button
+                    class="button icon ion-plus button-small button-positive"
+                    data-ng-click="editProductInputExpand=true"
+                    data-ng-hide="editProductInputExpand">
+                </button>
+                <button
+                    class="button icon ion-minus button-small button-positive"
+                    data-ng-click="editProductInputExpand=false"
+                    data-ng-show="editProductInputExpand">
+                </button>
+            </div>
+
+            <div class="item item-body" data-ng-show="editProductInputExpand">
+
+                <div class="list">
+                    <div class="row item item-input-inset">
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">SKU</span>
+                                <input type="text" ng-model="newProduct.sku">
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">Name</span>
+                                <input type="text" ng-model="newProduct.name">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row item item-input-inset">
+                        <label class="item item-input-wrapper">
+                            <span class="input-label">Description</span>
+                            <input type="text" ng-model="newProduct.description">
+                        </label>
+                    </div>
+                    <div class="row item item-input-inset">
+                        <label class="item item-input-wrapper">
+                            <span class="input-label">Image URL</span>
+                            <input type="text" ng-model="newProduct.image" placeholder="Image URL">
+                        </label>
+                    </div>
+                    <div class="row item item-input-inset">
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">Price</span>
+                                <input type="text" ng-model="newProduct.price">
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">Calories</span>
+                                <input type="text" ng-model="newProduct.cal">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row item item-input-inset">
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">Carotenoid</span>
+                                <input type="text" ng-model="newProduct.nutrients.Carotenoid">
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">Fiber</span>
+                                <input type="text" ng-model="newProduct.nutrients.Fiber">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row item item-input-inset">
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">Folates</span>
+                                <input type="text" ng-model="newProduct.nutrients.Folates">
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">Potassium</span>
+                                <input type="text" ng-model="newProduct.nutrients.Potassium">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row item item-input-inset">
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">Vitamin C</span>
+                                <input type="text" ng-model="newProduct.nutrients.VitaminC">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="item item-divider item-calm">
+                        <a href="" ng-click='store.products.$add(newProduct); newProduct = null;'>
+                            <button class="button button-balanced">
+                                Add a Product
+                            </button>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="list card" ng-repeat="product in store.products | orderBy:order | filter:search">
+            <div class="item item-divider item-calm">
+                Edit Product {{product.name}}
+            </div>
+
+            <div class="item item-body">
+
+                <div class="list">
+                    <div class="row item item-input-inset">
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">SKU</span>
+                                <input type="text" ng-model="product.sku">
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">Name</span>
+                                <input type="text" ng-model="product.name">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row item item-input-inset">
+                        <label class="item item-input-wrapper">
+                            <span class="input-label">Description</span>
+                            <input type="text" ng-model="product.description">
+                        </label>
+                    </div>
+                    <div class="row item item-input-inset">
+                        <label class="item item-input-wrapper">
+                            <span class="input-label">Image URL</span>
+                            <input type="text" ng-model="product.image" placeholder="Image URL">
+                        </label>
+                    </div>
+                    <div class="row item item-input-inset">
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">Price</span>
+                                <input type="text" ng-model="product.price">
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">Calories</span>
+                                <input type="text" ng-model="product.cal">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row item item-input-inset">
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">Carotenoid</span>
+                                <input type="text" ng-model="product.nutrients.Carotenoid">
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">Fiber</span>
+                                <input type="text" ng-model="product.nutrients.Fiber">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row item item-input-inset">
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">Folates</span>
+                                <input type="text" ng-model="product.nutrients.Folates">
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">Potassium</span>
+                                <input type="text" ng-model="product.nutrients.Potassium">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row item item-input-inset">
+                        <div class="col">
+                            <label class="item item-input-wrapper">
+                                <span class="input-label">Vitamin C</span>
+                                <input type="text" ng-model="product.nutrients.VitaminC">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="item item-divider item-calm">
+                        <a href="" ng-click='store.products.$save(product)'>
+                            <button class="button button-energized">
+                                Update
+                            </button>
+                        </a>
+                        <a href="" ng-click="store.products.$remove(product)">
+                            <button class="button button-assertive">
+                                Delete
+                            </button>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

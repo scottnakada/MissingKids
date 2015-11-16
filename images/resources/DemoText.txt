@@ -1,0 +1,35 @@
+For Choo Choo Poo Poo, we developed three apps:
+
+	1) a Web App
+	2) an Android App
+	3) an iPad/iPhone App
+	
+These apps allow the customer to:
+	1) Locate Choo Choo Poo Poo events and locations
+	2) Purchase Day, 6-month, or annual passes
+	3) Book an appointment
+	
+Slide 1 - Three apps, Technologies, Tools, and APIs used to develop apps
+Slide 2 - Welcome to Choo Choo Poo Poo
+Slide 3 - Login Screen
+	a) Login/Password stored in common Firebase Database so same login
+		works on all three apps
+	b) Social media logins via Facebook, Google, Twitter, and Github
+Slide 4 - Home Screen
+	a) Menus and screen changes depending upon whether user is logged in or not
+	b) Menus/screen changes if user is a manager, or admin
+	c) Screen directs user to the next step in the process
+Slide 5 - Map Screen
+	a) Helps user locate Choo Choo Poo Poo events/locations closest to
+		their current GPS location
+Slide 6 - Detail Screen
+	a) Shows the day and hours for an event/location
+	b) Allows user to purchase access to the location
+	c) Allows user to make an appointment at that location
+Slide 7 - Store
+	a) Allows user to select a Day pass, 6-month pass, or annual pass
+Slide 8 - Cart
+	a) Allows purchase via Paypal
+Slide 9 - Appointment
+	a) Allows customer to book a timeslot
+
