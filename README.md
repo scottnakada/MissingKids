@@ -1,15 +1,15 @@
-<h1>Bathroom Locator Apps</h1>
+<h1>Missing Kids Apps</h1>
 
   <br>
     <center>
-      <a href="http://scottnakada.github.io/BathroomLocator/yoBathroomLocator/dist/public/index.html">
-        <img src="images/LaptopBathroomLocator.png" width="45%">
+      <a href="http://scottnakada.github.io/MissingKids/yoMissingKids/dist/public/index.html">
+        <img src="images/LaptopMissingKids.png" width="45%">
       </a>
       <a href="http://www.amazon.com/Quickstart-Prototypes-Food-Flag/dp/B014Q5BKGC/ref=sr_1_6?ie=UTF8&qid=1441077217&sr=8-6&keywords=quickstart+prototypes">
-        <img src="images/AndroidBathroomLocator.png" width="15%">
+        <img src="images/AndroidMissingKids.png" width="15%">
       </a>&nbsp;&nbsp;&nbsp;
-      <a href="http://scottnakada.github.io/BathroomLocator/#ios">
-        <img src="images/iPadBathroomLocator.png" width="30%">
+      <a href="http://scottnakada.github.io/MissingKids/#ios">
+        <img src="images/iPadMissingKids.png" width="30%">
       </a>
     </center>
   <br>
@@ -47,14 +47,14 @@
       </p>
       <ol>
         <li>
-          <a href="http://scottnakada.github.io/BathroomLocator/yoBathroomLocator/dist/public/index.html">
-            <img src="images/LaptopBathroomLocator.png" height="200px"/>
+          <a href="http://scottnakada.github.io/MissingKids/yoMissingKids/dist/public/index.html">
+            <img src="images/LaptopMissingKids.png" height="200px"/>
           </a>
-          On the <a href="http://scottnakada.github.io/BathroomLocator/yoBathroomLocator/dist/public/index.html">web</a>:<br><br>
+          On the <a href="http://scottnakada.github.io/MissingKids/yoMissingKids/dist/public/index.html">web</a>:<br><br>
         </li>
         <li>
           <a href="http://www.amazon.com/Quickstart-Prototypes-Food-Flag/dp/B014Q5BKGC/ref=sr_1_6?ie=UTF8&qid=1441077217&sr=8-6&keywords=quickstart+prototypes">
-            <img src="images/AndroidBathroomLocator.png" height="200px"/>
+            <img src="images/AndroidMissingKids.png" height="200px"/>
           </a>
           On Android devices through the
           <a href="http://www.amazon.com/Quickstart-Prototypes-Food-Flag/dp/B014Q5BKGC/ref=sr_1_6?ie=UTF8&qid=1441077217&sr=8-6&keywords=quickstart+prototypes">
@@ -62,8 +62,8 @@
           </a>.
         </li>
         <li>
-          <a href="http://scottnakada.github.io/BathroomLocator/index.html#ios">
-            <img src="images/iPadBathroomLocator.png" height="200px"/>
+          <a href="http://scottnakada.github.io/MissingKids/index.html#ios">
+            <img src="images/iPadMissingKids.png" height="200px"/>
           </a>
           On Apple devices (iPhone/iPad), by downloading an app called Ionic View, and selecting the
           app id: <a href="#ios">f869122b</a>. See the next section for directions
