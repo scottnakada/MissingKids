@@ -5,11 +5,29 @@
     <file url="file://$PROJECT_DIR$/ionMissingKids/bower.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionMissingKids/package.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionMissingKids/www/css/style.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/game1/error/error.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/game1/error/error.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/game1/error2/error2.controller.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/game1/error2/error2.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/game1/error2/error2.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/game1/game1/game1.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/game1/game1/game1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/game1/game1A/game1A.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/game1/game1A/game1A.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/game1/game1B/game1B.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/game1/game1B/game1B.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/game1/game1C/game1C.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/game1/game1C/game1C.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionMissingKids/www/home/home.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionMissingKids/www/home/home.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionMissingKids/www/js/app.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionMissingKids/www/menu/menu.controller.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionMissingKids/www/menu/menu.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/myKids/myKids.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/myKids/myKids.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/report/report.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/report/report.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/results/results.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionMissingKids/www/shoppingCart/cart/cart.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionMissingKids/www/shoppingCart/cart/cart.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionMissingKids/www/shoppingCart/editProduct/editProduct.css" charset="UTF-8" />
@@ -20,6 +38,10 @@
     <file url="file://$PROJECT_DIR$/ionMissingKids/www/shoppingCart/store/store.controller.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionMissingKids/www/shoppingCart/store/store.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionMissingKids/www/shoppingCart/store/store.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/statistics/statistics.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/statistics/statistics.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/thankYou/thankYou.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionMissingKids/www/thankYou/thankYou.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionMissingKids/www/userAuth/admin/admin.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionMissingKids/www/userAuth/auth/auth.service.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ionMissingKids/www/userAuth/login/login.controller.js" charset="UTF-8" />

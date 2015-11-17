@@ -1,0 +1,45 @@
+<ion-view view-title="Search" name="search-view">
+    <ion-content class="padding">
+        <center>
+            <h1>Search For Kids</h1>
+
+            <div class="list">
+
+                <div class="item item-divider">
+                    Gender
+                </div>
+
+                <ion-radio ng-model="choice" ng-value="'Male'">Male</ion-radio>
+                <ion-radio ng-model="choice" ng-value="'Female'">Female</ion-radio>
+                <ion-radio ng-model="choice" ng-value="'Unknown'">Unknown</ion-radio>
+
+                <div class="item item-divider">
+                    Name
+                </div>
+
+                <label class="item item-input">
+                    <span class="input-label">First Name</span>
+                    <input type="text">
+                </label>
+
+                <label class="item item-input">
+                    <span class="input-label">Last Name</span>
+                    <input type="text">
+                </label>
+
+            </div>
+
+            <a href="#/app/results">
+                <button class="button button-block button-calm">
+                    <h3>Search Kids From This App</h3>
+                </button>
+            </a>
+            <br>
+            <a href="http://www.missingkids.org/search">
+                <button class="button button-block button-calm">
+                    <h3>Search National Database</h3>
+                </button>
+            </a>
+        </center>
+    </ion-content>
+</ion-view>

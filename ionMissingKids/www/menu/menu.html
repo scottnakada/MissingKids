@@ -28,6 +28,15 @@
                 <ion-item menu-close href="#/app/home">
                     Home
                 </ion-item>
+                <ion-item menu-close href="#/app/game1" ng-show="signedIn()">
+                    Meet Kid
+                </ion-item>
+                <ion-item menu-close href="#/app/myKids" ng-show="signedIn()">
+                    Search/Report
+                </ion-item>
+                <ion-item menu-close href="#/app/statistics" ng-show="signedIn()">
+                    Statistics
+                </ion-item>
                 <ion-item menu-close href="#/app/store" ng-show="signedIn()">
                     Store
                 </ion-item>

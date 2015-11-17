@@ -1,6 +1,6 @@
 <ion-view view-title="Home" name="home-view">
     <ion-content class="padding">
-        <h1>Welcome to Missing Kids App</h1>
+        <h1>Welcome to Kids Hope Network</h1>
 
         <!-- Hide if the user is signed in -->
         <div class="list" ng-hide="signedIn()">
@@ -22,7 +22,24 @@
 
         <!-- Show if the user is signed in -->
         <div class="list" ng-show="signedIn()">
-
+            <div class="item item-button-right">
+                Meet Kid
+                <button class="button button-calm" ng-click="go('app.game1')">
+                    Meet Kid
+                </button>
+            </div>
+            <div class="item item-button-right">
+                Search/Report
+                <button class="button button-calm" ng-click="go('app.myKids')">
+                    Search/Report
+                </button>
+            </div>
+            <div class="item item-button-right">
+                Statistics
+                <button class="button button-calm" ng-click="go('app.statistics')">
+                    Statistics
+                </button>
+            </div>
             <div class="item item-button-right">
                 Go to the Store
                 <button class="button button-calm" ng-click="go('app.store')">

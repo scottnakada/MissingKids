@@ -3,12 +3,12 @@
 angular.module('ionMissingKidsApp')
     .config(function ($stateProvider) {
         $stateProvider
-            .state('app.home', {
-                url: '/home',
+            .state('app.error', {
+                url: '/error',
                 views: {
                     'menuContent': {
-                        templateUrl: "home/home.html",
-                        controller: 'HomeCtrl'
+                        templateUrl: "game1/error/error.html",
+                        controller: 'ErrorCtrl'
                     }
                 }
             }

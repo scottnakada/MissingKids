@@ -6,3 +6,7 @@ map {
 .img-circle.gravatar {
     width: 40px;
 }
+
+.imagePic {
+    width: 25%;
+}
