@@ -35,31 +35,22 @@
             <div class="panel panel-primary panel-product">
                 <div class="panel-heading">
                     <h3 class="panel-title">
-                        <a href="/products/{{product.sku}}">
-                            {{product.name}}
-                        </a>
+                        {{product.name}}
                     </h3>
                 </div>
                 <div class="panel-body">
-                    <a href="/products/{{product.sku}}">
-                        <img ng-src="{{product.image}}" alt="{{product.name}}" style="height:70px"/>
+                    <img ng-src="{{product.image}}" alt="{{product.name}}" style="height:70px"/>
 
-                        <h3 style="float:right">
-                            {{product.price | currency}}
-                        </h3><br>
-                        <b>Description:</b><br>
+                    <h3 style="float:right">
+                        {{product.price | currency}}
+                    </h3><br>
+                    <b>Description:</b><br>
 
-                        <p>&nbsp;&nbsp;&nbsp;{{product.description}}</p>
-                        <b>Calories:</b> {{product.cal}}<br>
-                        <b>Nutrients</b><br>
-                        <b>&nbsp;&nbsp;&nbsp;Carotenoid:</b> {{product.nutrients.Carotenoid}}<br>
-                        <b>&nbsp;&nbsp;&nbsp;Fiber:</b> {{product.nutrients.Fiber}}<br>
-                        <b>&nbsp;&nbsp;&nbsp;Folates:</b> {{product.nutrients.Folates}}<br>
-                        <b>&nbsp;&nbsp;&nbsp;Potassium:</b> {{product.nutrients.Potassium}}<br>
-                        <b>&nbsp;&nbsp;&nbsp;Vitamin C:</b> {{product.nutrients.VitaminC}}<br>
-                    </a><br>
+                    <p>&nbsp;&nbsp;&nbsp;{{product.description}}</p>
+
+                    <br>
                     <a href="" ng-click="cart.addItem(product.sku, product.name, product.price, 1)">
-                        <button>add to cart</button>
+                        <button class="btn btn-success">add to cart</button>
                     </a>
                 </div>
             </div>
@@ -70,24 +61,18 @@
         <table class="table table-bordered">
             <tr ng-repeat="product in store.products | orderBy:'name' | filter:search">
                 <td class="tdCenter">
-                    <a href="/products/{{product.sku}}">
-                        <img ng-src="{{product.image}}" alt="{{product.name}}" style="height:70px"/>
-                    </a>
+                    <img ng-src="{{product.image}}" alt="{{product.name}}" style="height:70px"/>
                 </td>
                 <td>
-                    <a href="/products/{{product.sku}}"><b>{{product.name}}</b></a><br/>
-                    <a href="/products/{{product.sku}}">
-                        {{product.description}}
-                    </a>
+                    <b>{{product.name}}</b><br/>
+                    {{product.description}}
                 </td>
                 <td class="tdRight">
-                    <a href="/products/{{product.sku}}">
-                        {{product.price | currency}}
-                    </a>
+                    {{product.price | currency}}
                 </td>
                 <td class="tdCenter">
                     <a href="" ng-click="cart.addItem(product.sku, product.name, product.price, 1)">
-                        add to cart
+                        <button class="btn btn-success">add to cart</button>
                     </a>
                 </td>
             </tr>

@@ -4,16 +4,24 @@ angular.module('yoMissingKidsApp')
     .controller('NavbarCtrl', function ($scope, $location, Auth, toaster) {
         $scope.menu = [
             {
-                'title': 'Statistics',
-                'link': '/statistics'
-            },
-            {
                 'title': 'Play Game',
                 'link': '/game1'
             },
             {
                 'title': 'Search/Report',
                 'link': '/myKids'
+            },
+            {
+                'title': 'Statistics',
+                'link': '/statistics'
+            },
+            {
+                'title': 'Store',
+                'link': '/store'
+            },
+            {
+                'title': 'Cart',
+                'link': '/cart'
             }
         ];
 
