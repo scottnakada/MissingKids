@@ -1,10 +1,6 @@
 <div class="col-md-offset-3 col-md-6">
-    <center><h1>Welcome to Missing Kids App</h1></center>
+    <center><h1>Welcome to the Kids Hope Network</h1></center>
     <h4>
-        <p>
-            Teach people to recognise the faces of missing children;
-            while improving their face to name association skills.
-        </p>
         <br>
 
         <div ng-hide="signedIn();">
@@ -30,6 +26,50 @@
         </div>
         <div ng-show="signedIn();">
             <ol>
+                <li>
+                    Meet the Kid
+                    <a href="/game1">
+                        <button class="btn btn-info">
+                            Meet the Kid
+                        </button>
+                    </a>
+                    <br><br>
+                </li>
+                <li>
+                    Search/Report
+                    <a href="/myKids">
+                        <button class="btn btn-info">
+                            Search/Report
+                        </button>
+                    </a>
+                    <br><br>
+                </li>
+                <li>
+                    Statistics
+                    <a href="/statistics">
+                        <button class="btn btn-info">
+                            Statistics
+                        </button>
+                    </a>
+                    <br><br>
+                </li>
+                <li>
+                    Store<a href="/store">
+                        <button class="btn btn-info">
+                            Store
+                        </button>
+                    </a>
+                    <br><br>
+                </li>
+                <li>
+                    Shopping Cart
+                    <a href="/cart">
+                        <button class="btn btn-info">
+                            Cart
+                        </button>
+                    </a>
+                    <br><br>
+                </li>
                 <li ng-show="isManager()">
                     Edit the Products:
                     <a href="/editProduct">
