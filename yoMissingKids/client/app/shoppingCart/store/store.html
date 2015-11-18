@@ -21,10 +21,12 @@
     <table class="table table-bordered">
         <tr class="well">
             <td class="tdRight" colspan="4">
-                <a href="/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
-                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-                    <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
-                </a>
+                <h4>
+                    <a href="/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                        <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+                    </a>
+                </h4>
             </td>
         </tr>
     </table>
@@ -41,9 +43,9 @@
                 <div class="panel-body">
                     <img ng-src="{{product.image}}" alt="{{product.name}}" style="height:70px"/>
 
-                    <h3 style="float:right">
+                    <h2 style="float:right">
                         {{product.price | currency}}
-                    </h3><br>
+                    </h2><br>
                     <b>Description:</b><br>
 
                     <p>&nbsp;&nbsp;&nbsp;{{product.description}}</p>
@@ -51,6 +53,19 @@
                     <br>
                     <a href="" ng-click="cart.addItem(product.sku, product.name, product.price, 1)">
                         <button class="btn btn-success">add to cart</button>
+                    </a>
+
+                    <h4>
+                        <a href="/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                            <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+                        </a>
+                    </h4>
+
+                    <a href="/cart">
+                        <button class="btn btn-success">
+                            <b>Checkout</b>
+                        </button>
                     </a>
                 </div>
             </div>
@@ -81,10 +96,12 @@
     <table class="table table-bordered">
         <tr class="well">
             <td class="tdRight" colspan="4">
-                <a href="/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
-                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-                    <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
-                </a>
+                <h4>
+                    <a href="/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                        <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                        <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+                    </a>
+                </h4>
             </td>
         </tr>
     </table>
