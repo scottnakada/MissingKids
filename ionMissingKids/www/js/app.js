@@ -45,3 +45,16 @@ angular.module('ionMissingKidsApp', [
         // if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise('/app/home');
     });
+
+branch.link({
+    channel: 'sms',
+    feature: 'share',
+    data: {
+        'article_id': '1234',
+        '$desktop_url': 'http://www.KidsHopeNetwork.co',
+        '$og_title': 'Check out this article!',
+    }
+}, function (err, link) {
+    console.log(err, link);
+});
+
